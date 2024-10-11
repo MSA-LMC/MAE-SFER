@@ -2,6 +2,9 @@
 
 MAE pre-training models (ViT-base, ViT-small, ViT-tiny) using 270K AffectNet images for static facial expression recognition (SFER).
 
+## ViTs pre-trained on AffectNet
+
+
 ## Citation
 If you find this repo helpful, please consider citing:
 
