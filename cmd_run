@@ -1,0 +1,40 @@
+###############################   RAF-DB   ###############################
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=4 main_rafdb.py --learning-rate 1e-4 --epoch 100 --opt-level O0
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=4 main_rafdb.py --learning-rate 1e-4 --epoch 130
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=4 main_rafdb.py --learning-rate 1e-4 --epoch 130 --model-name vit_base_patch16_224_in21k
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_rafdb.py --learning-rate 1e-4 --epoch 130 --model-name vit_tiny_patch16_224 --loss-fn smoothCE
+
+
+###############################  AffectNet  ###############################
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_affectnet.py --learning-rate 1e-4 --epoch 130 --model-name vit_tiny_patch16_224
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_affectnet.py --learning-rate 1e-4 --epoch 40
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_affectnet7.py --learning-rate 1e-5 --epoch 60 --model-name vit_base_patch16_224 --mixup
+
+
+###############################  FER-Plus  ###############################
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_ferplus.py --learning-rate 1e-4 --epoch 90 --model-name vit_base_patch16_224
+
+
+# ############################### MAE ViT  ###############################
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_rafdb.py --learning-rate 1e-4 --epoch 120 --model-name vit_base_fixedpe_patch16_224 --resume --checkpoint-whole checkpoint/vit-base-checkpoint-300.pth
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_rafdb.py --learning-rate 1e-4 --epoch 120 --model-name vit_tiny_fixedpe_patch16_224 --resume --checkpoint-whole checkpoint/vit-tiny-checkpoint-299.pth
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_rafdb.py --learning-rate 1e-5 --epoch 120 --model-name vit_base_fixedpe_patch16_224 --resume --checkpoint-whole checkpoint/vit-base-checkpoint-300.pth --mixup
+
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_ferplus.py --learning-rate 1e-5 --epoch 120 --model-name vit_base_fixedpe_patch16_224 --resume --checkpoint-whole checkpoint/vit-base-checkpoint-300.pth --mixup --weight-decay 1e-4 --layer-decay 0.75
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_ferplus.py --learning-rate 1e-5 --epoch 120 --model-name vit_base_fixedpe_patch16_224 --resume --checkpoint-whole checkpoint/mae_pretrain_vit_base.pth
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_affectnet7.py --learning-rate 1e-5 --epoch 60 --model-name vit_base_fixedpe_patch16_224 --resume --checkpoint-whole checkpoint/vit-base-checkpoint-300.pth --mixup
+
+
+cd /lijia/Project/FER_TF && python -m torch.distributed.launch --nproc_per_node=1 main_affectnet7.py --learning-rate 1e-5 --epoch 60 --model-name vit_tiny_fixedpe_patch16_224 --resume --checkpoint-whole checkpoint/vit-tiny-checkpoint-299.pth --mixup
+
+
