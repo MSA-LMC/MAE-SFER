@@ -4,7 +4,9 @@ MAE pre-training models (ViT-base, ViT-small, ViT-tiny) using 270K AffectNet ima
 
 ## ViTs pre-trained on AffectNet
 Download the pre-trained weights(270K AffectNet)
+
 1、MAE：[ViT-Base](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link)、[ViT-Small](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link)、[ViT-Tiny](https://drive.google.com/file/d/1wsXXVXlRP69RsbZiQD7GJUtCkI4JyJN7/view?usp=drive_link)
+
 2、Convnext V2：[ViT-Base](https://drive.google.com/file/d/1d56vRmpOu_r9Z8Fy61qxLyp_U6ZXP0YR/view?usp=drive_link)
 
 ## Citation
