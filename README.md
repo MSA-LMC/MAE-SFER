@@ -75,20 +75,13 @@ python -m torch.distributed.launch main_pretrain_convnextv2.py \
 ### 270K AffectNet pre-trained weights
 | name | resolution | RAF-DB Acc(%) | AffectNet-7 Acc(%) | AffectNet-8 Acc(%) | FERPlus Acc(%) | model |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| MAE ViT-Base  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_atto_1k_224_fcmae.pt) |
-| MAE ViT-Small | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_femto_1k_224_fcmae.pt) |
-| MAE ViT-Small | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_pico_1k_224_fcmae.pt) |
-| MAE ViT-Tiny  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_nano_1k_224_fcmae.pt) |
-| MAE ViT-Tiny  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_tiny_1k_224_fcmae.pt) |
-| ConvNeXt V2-B | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_base_1k_224_fcmae.pt) |
-
-Download the pre-trained weights(270K AffectNet)
-
-1、MAE：[ViT-Base](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link)、[ViT-Small](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link)、[ViT-Tiny](https://drive.google.com/file/d/1wsXXVXlRP69RsbZiQD7GJUtCkI4JyJN7/view?usp=drive_link)
+| MAE ViT-Base  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link) |
+| MAE ViT-Small | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link) |
+| MAE ViT-Tiny  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://drive.google.com/file/d/1wsXXVXlRP69RsbZiQD7GJUtCkI4JyJN7/view?usp=drive_link) |
+| ConvNeXt V2-B | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://drive.google.com/file/d/1d56vRmpOu_r9Z8Fy61qxLyp_U6ZXP0YR/view?usp=drive_link) |
 
 > Additional weights for ViT-Small（[600 epochs](https://drive.google.com/file/d/1keVIevQ2sirsOpZ4TE2dSehraUBuWLJl/view?usp=drive_link)） and ViT-Tiny([600](https://drive.google.com/file/d/1CZvTJRmswwMlX1Z5_48xJSMLdLtYAXq9/view?usp=drive_link) / [800](https://drive.google.com/file/d/11Zz4jFzN7fMqdp9XdJUe8gkVTOgBUUn1/view?usp=drive_link) / [1000](https://drive.google.com/file/d/1GwjtvvhffEtFNZWThWTTukf4Jap1QR5k/view?usp=drive_link) epochs) trained for more epochs are available.
 
-2、Convnext V2：[ViT-Base](https://drive.google.com/file/d/1d56vRmpOu_r9Z8Fy61qxLyp_U6ZXP0YR/view?usp=drive_link)
 
 ## Citation
 If you find this repo helpful, please consider citing:
