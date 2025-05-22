@@ -73,7 +73,7 @@ python -m torch.distributed.launch main_pretrain_convnextv2.py \
 
 ## Results and Pre-trained Models
 ### 270K AffectNet pre-trained weights for 300 epochs
-| name | resolution | RAF-DB Acc(%) | AffectNet-8 Acc(%) | AffectNet-8 Acc(%) | FERPlus Acc(%) | #params | model |
+| name | resolution | RAF-DB Acc(%) | AffectNet-7 Acc(%) | AffectNet-8 Acc(%) | FERPlus Acc(%) | #params | model |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | MAE ViT-Base  | 224x224 | 91.07 | 66.09 | 62.42 | 90.18 | 86.5M | [model](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link) |
 | MAE ViT-Small | 224x224 | 90.03 | 65.53 | 62.06 | 89.35 | 21.9M | [model](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link) |
