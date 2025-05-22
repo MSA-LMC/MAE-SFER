@@ -18,6 +18,46 @@ python -m torch.distributed.launch main_pretrain.py \
 --log_dir /path/to/./out_dir_base
 ```
 
+<details>
+<summary>
+MAE ViT-Small
+</summary>
+  
+MAE ViT-Small pre-training on 270K AffectNet with a single 3090 GPU:
+```
+python -m torch.distributed.launch main_pretrain.py \
+--model mae_vit_Small_patch16 \
+--batch_size 32 \
+--accum_iter 4 --mask_ratio 0.75 \
+--blr 1.5e-4 \
+--epochs 300 \
+--warmup_epochs 40 --weight_decay 0.05 \
+--data_path /data/tao/fer/dataset/AffectNetdataset/Manually_Annotated_Images \
+--output_dir /path/to/./out_dir_small \
+--log_dir /path/to/./out_dir_small
+```
+</details>
+
+<details>
+<summary>
+MAE ViT-Tiny
+</summary>
+
+MAE ViT-Tiny pre-training on 270K AffectNet with a single 3090 GPU:
+```
+python -m torch.distributed.launch main_pretrain.py \
+--model mae_vit_Tiny_patch16 \
+--batch_size 32 \
+--accum_iter 4 --mask_ratio 0.75 \
+--blr 1.5e-4 \
+--epochs 300 \
+--warmup_epochs 40 --weight_decay 0.05 \
+--data_path /data/tao/fer/dataset/AffectNetdataset/Manually_Annotated_Images \
+--output_dir /path/to/./out_dir_tiny \
+--log_dir /path/to/./out_dir_tiny
+```
+</details>
+
 ConvNeXt V2-Base pre-training on 270K AffectNet with a single 3090 GPU:
 
 ```
