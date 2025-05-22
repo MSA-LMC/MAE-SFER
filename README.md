@@ -73,14 +73,14 @@ python -m torch.distributed.launch main_pretrain_convnextv2.py \
 
 ## Results and Pre-trained Models
 ### 270K AffectNet pre-trained weights
-| name | resolution | model |
-|:---:|:---:|:---:|
-| MAE ViT-Base  | 224x224 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_atto_1k_224_fcmae.pt) |
-| MAE ViT-Small | 224x224 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_femto_1k_224_fcmae.pt) |
-| MAE ViT-Small | 224x224 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_pico_1k_224_fcmae.pt) |
-| MAE ViT-Tiny  | 224x224 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_nano_1k_224_fcmae.pt) |
-| MAE ViT-Tiny  | 224x224 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_tiny_1k_224_fcmae.pt) |
-| ConvNeXt V2-B | 224x224 |[model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_base_1k_224_fcmae.pt) |
+| name | resolution | RAF-DB Acc(%) | AffectNet-7 Acc(%) | AffectNet-8 Acc(%) | FERPlus Acc(%) | model |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| MAE ViT-Base  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_atto_1k_224_fcmae.pt) |
+| MAE ViT-Small | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_femto_1k_224_fcmae.pt) |
+| MAE ViT-Small | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_pico_1k_224_fcmae.pt) |
+| MAE ViT-Tiny  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_nano_1k_224_fcmae.pt) |
+| MAE ViT-Tiny  | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_tiny_1k_224_fcmae.pt) |
+| ConvNeXt V2-B | 224x224 | 76.7 | 76.7 | 76.7 | 76.7 | [model](https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_base_1k_224_fcmae.pt) |
 
 Download the pre-trained weights(270K AffectNet)
 
