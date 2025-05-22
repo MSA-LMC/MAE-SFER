@@ -3,18 +3,19 @@
 MAE pre-training models (ViT-base, ViT-small, ViT-tiny) using 270K AffectNet images for static facial expression recognition (SFER).
 
 ## ViTs pre-trained on AffectNet
-ConvNeXt V2-Base pre-training on 270K AffectNet with a single machine:
+ConvNeXt V2-Base pre-training on 270K AffectNet with a single 3090 GPU:
 
 ```
-python -m torch.distributed.launch --nproc_per_node=8 main_pretrain.py \
+python -m torch.distributed.launch main_pretrain_convnextv2.py \
 --model convnextv2_base \
 --batch_size 64 --update_freq 8 \
 --blr 1.5e-4 \
---epochs 1600 \
+--epochs 400 \
 --warmup_epochs 40 \
---data_path /path/to/imagenet-1k \
---output_dir /path/to/save_results
+--data_path /data/tao/fer/dataset/AffectNetdataset/Manually_Annotated_Images \
+--output_dir /path/to/./out_dir_base_1
 ```
+
 Download the pre-trained weights(270K AffectNet)
 
 1、MAE：[ViT-Base](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link)、[ViT-Small](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link)、[ViT-Tiny](https://drive.google.com/file/d/1wsXXVXlRP69RsbZiQD7GJUtCkI4JyJN7/view?usp=drive_link)
