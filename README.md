@@ -73,12 +73,12 @@ python -m torch.distributed.launch main_pretrain_convnextv2.py \
 
 ## Results and Pre-trained Models
 ### 270K AffectNet pre-trained weights for 300 epochs
-| name | resolution | RAF-DB Acc(%) | AffectNet-8 Acc(%) | FERPlus Acc(%) | model |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| MAE ViT-Base  | 224x224 | 91.07 | 62.42 | 90.18 | [model](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link) |
-| MAE ViT-Small | 224x224 | 90.03 | 62.06 | 89.35 | [model](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link) |
-| MAE ViT-Tiny  | 224x224 | 88.72 | 61.45 | 88.67 | [model](https://drive.google.com/file/d/1wsXXVXlRP69RsbZiQD7GJUtCkI4JyJN7/view?usp=drive_link) |
-| ConvNeXt V2-B | 224x224 | 76.71 | 76.71 | 76.71 | [model](https://drive.google.com/file/d/1d56vRmpOu_r9Z8Fy61qxLyp_U6ZXP0YR/view?usp=drive_link) |
+| name | resolution | RAF-DB Acc(%) | AffectNet-8 Acc(%) | FERPlus Acc(%) | #params | model |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| MAE ViT-Base  | 224x224 | 91.07 | 62.42 | 90.18 | 86.5M | [model](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link) |
+| MAE ViT-Small | 224x224 | 90.03 | 62.06 | 89.35 | 21.9M | [model](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link) |
+| MAE ViT-Tiny  | 224x224 | 88.72 | 61.45 | 88.67 | 5.6M  | [model](https://drive.google.com/file/d/1wsXXVXlRP69RsbZiQD7GJUtCkI4JyJN7/view?usp=drive_link) |
+| ConvNeXt V2-B | 224x224 | 89.52 |   -   |   -   | 89M   | [model](https://drive.google.com/file/d/1d56vRmpOu_r9Z8Fy61qxLyp_U6ZXP0YR/view?usp=drive_link) |
 
 > Additional weights for ViT-Small（[600 epochs](https://drive.google.com/file/d/1keVIevQ2sirsOpZ4TE2dSehraUBuWLJl/view?usp=drive_link)） and ViT-Tiny([600](https://drive.google.com/file/d/1CZvTJRmswwMlX1Z5_48xJSMLdLtYAXq9/view?usp=drive_link) / [800](https://drive.google.com/file/d/11Zz4jFzN7fMqdp9XdJUe8gkVTOgBUUn1/view?usp=drive_link) / [1000](https://drive.google.com/file/d/1GwjtvvhffEtFNZWThWTTukf4Jap1QR5k/view?usp=drive_link) epochs) trained for more epochs are available.
 
