@@ -50,7 +50,7 @@ python -m torch.distributed.launch main_finetune_affectnet.py \
 --finetune '/path/out_dir_base_1/vit_base_checkpoint-299.pth'
 ```
 
-> In addition, **data augmentation tricks** can significantly improve fine-tuning performance. Such as flip, colorjit, 仿射变换, RandomErase, and mixup.
+> In addition, **data augmentation tricks** can significantly improve fine-tuning performance. Such as flip, colorjit, affine transformation, RandomErase, and mixup.
 
 
 <details>
