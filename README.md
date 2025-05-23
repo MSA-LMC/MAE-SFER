@@ -29,7 +29,7 @@ python -m torch.distributed.launch main_pretrain.py \
 --model mae_vit_Small_patch16 \
 --output_dir /path/to/./out_dir_small \
 --log_dir /path/to/./out_dir_small
-[参考vit-base...]
+[Other parameters refer to vit-base...]
 ```
 </details>
 
@@ -44,7 +44,7 @@ python -m torch.distributed.launch main_pretrain.py \
 --model mae_vit_Tiny_patch16 \
 --output_dir /path/to/./out_dir_tiny \
 --log_dir /path/to/./out_dir_tiny
-[参考vit-base...]
+[Other parameters refer to vit-base...]
 ```
 </details>
 
@@ -72,6 +72,7 @@ python -m torch.distributed.launch main_finetune_affectnet.py \
 --epochs 100 \
 --finetune '/path/out_dir_base_1/vit_base_checkpoint-299.pth'
 ```
+> Data augmentation tricks can significantly improve fine-tuning performance. Such as flip, colorjit, 仿射变换, RandomErase, and mixup
 
 <details>
 <summary>
@@ -83,7 +84,7 @@ MAE ViT-Small fine-tuning on 270K AffectNet with a single 3090 GPU
 python -m torch.distributed.launch main_finetune_affectnet.py \
 --model mae_vit_small_patch16 \
 --finetune '/path/out_dir_small_1/vit_small_checkpoint-300.pth'
-[参考vit-base...]
+[Other parameters refer to vit-base...]
 ```
 </details>
 
@@ -97,7 +98,7 @@ MAE ViT-Tiny fine-tuning on 270K AffectNet with a single 3090 GPU
 python -m torch.distributed.launch main_finetune_affectnet.py \
 --model mae_vit_tiny_patch16 \
 --finetune '/path/out_dir_tiny_1/vit_tiny_checkpoint-300.pth'
-[参考vit-base...]
+[Other parameters refer to vit-base...]
 ```
 </details>
 
