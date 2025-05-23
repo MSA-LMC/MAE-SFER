@@ -27,14 +27,9 @@ MAE ViT-Small pre-training on 270K AffectNet with a single 3090 GPU:
 ```
 python -m torch.distributed.launch main_pretrain.py \
 --model mae_vit_Small_patch16 \
---batch_size 32 \
---accum_iter 4 --mask_ratio 0.75 \
---blr 1.5e-4 \
---epochs 300 \
---warmup_epochs 40 --weight_decay 0.05 \
---data_path /data/tao/fer/dataset/AffectNetdataset/Manually_Annotated_Images \
 --output_dir /path/to/./out_dir_small \
 --log_dir /path/to/./out_dir_small
+[参考vit-base...]
 ```
 </details>
 
@@ -47,14 +42,9 @@ MAE ViT-Tiny pre-training on 270K AffectNet with a single 3090 GPU:
 ```
 python -m torch.distributed.launch main_pretrain.py \
 --model mae_vit_Tiny_patch16 \
---batch_size 32 \
---accum_iter 4 --mask_ratio 0.75 \
---blr 1.5e-4 \
---epochs 300 \
---warmup_epochs 40 --weight_decay 0.05 \
---data_path /data/tao/fer/dataset/AffectNetdataset/Manually_Annotated_Images \
 --output_dir /path/to/./out_dir_tiny \
 --log_dir /path/to/./out_dir_tiny
+[参考vit-base...]
 ```
 </details>
 
@@ -70,12 +60,13 @@ python -m torch.distributed.launch main_pretrain_convnextv2.py \
 --data_path /data/tao/fer/dataset/AffectNetdataset/Manually_Annotated_Images \
 --output_dir /path/to/./out_dir_base_1
 ```
+## Fine-Tuning
 
 ## Results and Pre-trained Models
 ### 270K AffectNet pre-trained weights for 300 epochs
 | name | resolution | RAF-DB Acc(%) | AffectNet-7 Acc(%) | AffectNet-8 Acc(%) | FERPlus Acc(%) | #params | model |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| MAE ViT-Base  | 224x224 | 91.07 | 66.09 | 62.42 | 90.18 | 86.5M | [model](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link) |
+| MAE ViT-Base  | 224x224 | 91.79 | 66.09 | 63.81 | 90.82 | 86.5M | [model](https://drive.google.com/file/d/1mNruds0jDCkstYdH5VkHrkeoRqoRabgS/view?usp=drive_link) |
 | MAE ViT-Small | 224x224 | 90.03 | 65.53 | 62.06 | 89.35 | 21.9M | [model](https://drive.google.com/file/d/1fPDoyHzrHwSKZI7dU7AcHd5dd2-ntwDk/view?usp=drive_link) |
 | MAE ViT-Tiny  | 224x224 | 88.72 | 64.25 | 61.45 | 88.67 | 5.6M  | [model](https://drive.google.com/file/d/1wsXXVXlRP69RsbZiQD7GJUtCkI4JyJN7/view?usp=drive_link) |
 | ConvNeXt V2-B | 224x224 | 89.52 |   -   |   -   |   -   | 89M   | [model](https://drive.google.com/file/d/1d56vRmpOu_r9Z8Fy61qxLyp_U6ZXP0YR/view?usp=drive_link) |
