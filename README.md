@@ -91,7 +91,7 @@ python -m torch.distributed.launch main_finetune.py \
 
 > Additional weights for ViT-Small（[600 epochs](https://drive.google.com/file/d/1keVIevQ2sirsOpZ4TE2dSehraUBuWLJl/view?usp=drive_link)） and ViT-Tiny([600](https://drive.google.com/file/d/1CZvTJRmswwMlX1Z5_48xJSMLdLtYAXq9/view?usp=drive_link) / [800](https://drive.google.com/file/d/11Zz4jFzN7fMqdp9XdJUe8gkVTOgBUUn1/view?usp=drive_link) / [1000](https://drive.google.com/file/d/1GwjtvvhffEtFNZWThWTTukf4Jap1QR5k/view?usp=drive_link) epochs) trained for more epochs are available.
 
-> The accuracy of MAE ViT-Base increased to 91.79%, 63.81%, and 90.82% on RAF-DB, AffectNet-8, and FERPlus respectively with data augmentation.
+> The accuracy of MAE ViT-Base increased to 91.79%, 63.81%, and 90.82% on RAF-DB, AffectNet-8, and FERPlus respectively with **data augmentation tricks**.
 
 ## Citation
 If you find this repo helpful, please consider citing:
