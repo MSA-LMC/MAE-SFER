@@ -61,6 +61,60 @@ python -m torch.distributed.launch main_pretrain_convnextv2.py \
 --output_dir /path/to/./out_dir_base_1
 ```
 ## Fine-Tuning
+MAE ViT-Base fine-tuning on 270K AffectNet with a single 3090 GPU:
+```
+python -m torch.distributed.launch main_finetune_affectnet.py \
+--model mae_vit_base_patch16 \
+--batch_size 16 \
+--accum_iter 2 \
+--blr 5e-4 --layer_decay 0.65 --weight_decay 0.05 \
+--drop_path 0.1 --reprob 0.25 --mixup 0.8 --cutmix 1.0 \
+--epochs 100 \
+--finetune '/path/out_dir_base_1/vit_base_checkpoint-299.pth'
+```
+
+<details>
+<summary>
+MAE ViT-Small
+</summary>
+  
+MAE ViT-Small fine-tuning on 270K AffectNet with a single 3090 GPU
+```
+python -m torch.distributed.launch main_finetune_affectnet.py \
+--model mae_vit_small_patch16 \
+--finetune '/path/out_dir_small_1/vit_small_checkpoint-300.pth'
+[参考vit-base...]
+```
+</details>
+
+<details>
+<summary>
+MAE ViT-Tiny
+</summary>
+  
+MAE ViT-Tiny fine-tuning on 270K AffectNet with a single 3090 GPU
+```
+python -m torch.distributed.launch main_finetune_affectnet.py \
+--model mae_vit_tiny_patch16 \
+--finetune '/path/out_dir_tiny_1/vit_tiny_checkpoint-300.pth'
+[参考vit-base...]
+```
+</details>
+
+ConvNeXt V2-Base fine-tuning on RAF-DB with a single 3090 GPU:
+```
+python -m torch.distributed.launch main_finetune.py \
+--model convnextv2_base \
+--batch_size 32 --update_freq 4 \
+--blr 6.25e-4 --epochs 100 --warmup_epochs 20 \
+--layer_decay_type 'group' --layer_decay 0.6 --weight_decay 0.05 \
+--drop_path 0.1 --reprob 0.25 \
+--mixup 0.8 --cutmix 1.0 --smoothing 0.1 \
+--model_ema True --model_ema_eval True \
+--use_amp True \
+--data_path /path/to/Dataset/RAF-DB/basic \
+--finetune '/path/out_dir_base/convnextv2_base_checkpoint-320.pth'
+```
 
 ## Results and Pre-trained Models
 ### 270K AffectNet pre-trained weights for 300 epochs
