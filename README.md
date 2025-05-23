@@ -14,12 +14,11 @@ python -m torch.distributed.launch main_pretrain.py \
 --epochs 300 \
 --warmup_epochs 40 --weight_decay 0.05 \
 --data_path /data/tao/fer/dataset/AffectNetdataset/Manually_Annotated_Images \
---output_dir /path/to/./out_dir_base \
---log_dir /path/to/./out_dir_base
+--output_dir /path/to/./out_dir_base
 ```
 <details>
 <summary>
-MAE ViT-Small and MAE ViT-Tiny follow the same hyperparameter settings as ViT-Base for MAE pre-training, except for the --model and arguments.
+MAE ViT-Small and MAE ViT-Tiny follow the same hyperparameter settings as ViT-Base for MAE pre-training, except for the --model and --output_dir arguments.
 </summary>
 --model mae_vit_small_patch16 and  --output_dir /path/to/./out_dir_small for ViT-Small
 
