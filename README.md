@@ -21,11 +21,9 @@ python -m torch.distributed.launch main_pretrain.py \
 <summary>
 MAE ViT-Small and MAE ViT-Tiny follow the same hyperparameter settings as ViT-Base for MAE pre-training, except for the --model and arguments.
 </summary>
-```
---model mae_vit_small_patch16 and  --output_dir /path/to/./out_dir_small for ViT-Small \
+--model mae_vit_small_patch16 and  --output_dir /path/to/./out_dir_small for ViT-Small
 
 --model mae_vit_tiny_patch16 and  --output_dir /path/to/./out_dir_tiny for ViT-Tiny
-```
 </details>
 
 ConvNeXt V2-Base pre-training on 270K AffectNet with a single 3090 GPU:
@@ -60,11 +58,10 @@ python -m torch.distributed.launch main_finetune_affectnet.py \
 <summary>
 MAE ViT-Small and MAE ViT-Tiny follow the same hyperparameter settings as ViT-Base for MAE pre-training, except for the --model and --finetune arguments.
 </summary>
-```
---model mae_vit_small_patch16 and --finetune /path/out_dir_small_1/vit_small_checkpoint-300.pth for ViT-Small \
+--model mae_vit_small_patch16 and --finetune /path/out_dir_small_1/vit_small_checkpoint-300.pth for ViT-Small
 
 --model mae_vit_tiny_patch16 and --finetune /path/out_dir_tiny_1/vit_tiny_checkpoint-300.pth for ViT-Tiny
-```
+
 </details>
 
 
