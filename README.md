@@ -18,7 +18,7 @@ python -m torch.distributed.launch main_pretrain.py \
 ```
 <details>
 <summary>
-**ViT-Small** and **ViT-Tiny** follow the same parameter settings as ViT-Base for MAE pre-training, except for the --model and --output_dir.
+> **ViT-Small** and **ViT-Tiny** follow the same parameter settings as ViT-Base for MAE pre-training, except for the --model and --output_dir.
 </summary>
 --model mae_vit_small_patch16 and  --output_dir /path/to/./out_dir_small for ViT-Small
 
@@ -55,7 +55,7 @@ python -m torch.distributed.launch main_finetune_affectnet.py \
 
 <details>
 <summary>
-**ViT-Small** and **ViT-Tiny** follow the same parameter settings as ViT-Base for MAE fine-tuning, except for the --model and --finetune.
+> **ViT-Small** and **ViT-Tiny** follow the same parameter settings as ViT-Base for MAE fine-tuning, except for the --model and --finetune.
 </summary>
 --model mae_vit_small_patch16 and --finetune /path/out_dir_small_1/vit_small_checkpoint-300.pth for ViT-Small
 
