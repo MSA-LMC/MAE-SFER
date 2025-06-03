@@ -38,7 +38,19 @@ python -m torch.distributed.launch main_pretrain_convnextv2.py \
 --output_dir /path/to/./out_dir_base_1
 ```
 ## Fine-Tuning
-MAE ViT-Base fine-tuning on 270K AffectNet with a single 3090 GPU:
+Fine-tuning MAE ViT-Base on RAF-DB with a single GPU:
+```
+python -m torch.distributed.launch main_rafdb.py\
+--nproc_per_node=1 \
+--learning-rate 1e-5 \
+--epoch 120 \
+--model-name vit_base_fixedpe_patch16_224 \
+--resume \
+--checkpoint-whole checkpoint/vit-base-checkpoint-300.pth
+--mixup
+```
+
+Fine-tuning MAE ViT-Base on 270K AffectNet with a single 3090 GPU:
 ```
 python -m torch.distributed.launch main_finetune_affectnet.py \
 --model mae_vit_base_patch16 \
