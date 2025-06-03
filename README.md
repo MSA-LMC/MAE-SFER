@@ -58,9 +58,10 @@ python -m torch.distributed.launch main_finetune_affectnet.py \
 --accum_iter 2 \
 --blr 5e-4 --layer_decay 0.65 --weight_decay 0.05 \
 --drop_path 0.1 --reprob 0.25 --mixup 0.8 --cutmix 1.0 \
---epochs 100 \
+--epochs 10 \
 --finetune '/path/out_dir_base_1/vit_base_checkpoint-299.pth'
 ```
+Hint: few training epochs is recommaned on AffectNet dataset to avoid overfitting noisy labels.
 
 > In addition, **data augmentation tricks** can significantly improve fine-tuning performance. Such as flip, colorjit, affine transformation, RandomErase, and mixup.
 
